@@ -1,1 +1,1 @@
-print ('Hello World') mmap
+print ('Hello World')
