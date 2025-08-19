@@ -1,2 +1,1 @@
-user = input('Käyttäjä: ')
-print("Morjens, " + user)
+print("Morjens, Stu L!")
