@@ -1,5 +1,7 @@
+#kysytään käytetyt kilowatti tunnit
 used_hours = float( input("Anna kuinka monta kilowatti tuntia olet kuluttanut numerona: "))
 
+#lasketaan sähkölasku
 if 0 > used_hours <= 50:
     laskutus = used_hours * 0.10
     print(f"Sähkölaskusi on {laskutus:.2f} euroa.")
