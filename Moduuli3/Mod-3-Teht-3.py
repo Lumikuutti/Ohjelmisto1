@@ -16,4 +16,4 @@ elif gender == "AMAB":
     else:
         print("Hemoglobiiniarvosi on korkea.")
 else:
-    print("Jotain meni vikaan.")
+    print("Jotain meni vikaan prosessissa.")
