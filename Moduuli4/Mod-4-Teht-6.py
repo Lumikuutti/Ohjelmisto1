@@ -6,6 +6,7 @@ points_in_circle = 0
 points_to_generate = int( input("Anna kuinka monta pistettä kokeillaan: "))
 
 while total_points < points_to_generate:
+    #käytetään random.uniform randint:in tai randrangen sijaan että saadaan decimaali lukuja!
     x = random.uniform (-1,1)
     y = random.uniform (-1, 1)
     total_points = total_points + 1
