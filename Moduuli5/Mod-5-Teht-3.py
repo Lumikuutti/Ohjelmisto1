@@ -1,5 +1,5 @@
 new_number = input("Anna luku tai paina Enter ohjelman lopettamiseksi: ")
-alkuluku = False
+alkuluku = True
 if new_number == "":
     print("Lopetit ohjelman heti.")
 else:
@@ -10,9 +10,7 @@ else:
         if new_number % x == 0:
             alkuluku = False
             print("Luku ei ole alkuluku.")
+            #hypätään pois loopista
             break
-        else:
-            alkuluku = True
-
     if alkuluku:
         print("Luku on alkuluku.")
