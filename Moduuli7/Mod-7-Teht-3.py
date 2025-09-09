@@ -11,13 +11,14 @@ while command != "":
         icao = input("Anna lentokentän ICAO koodi: ")
         name = input("Anna lentokentän nimi: ")
         airports[icao] = name
-        command = input("Mitä haluaisit tehdä seuraavaksi: ")
     elif command == "search":
         icao = input("Anna lentokentän ICAO koodi: ")
         if icao in airports:
             print(f"Lentokenttä löydetty, sen nimi on {airports[icao]}")
         else:
             print("Valitettavasti lentokenttää ei löydy tästä tietokannasta.")
-        command = input("Mitä haluaisit tehdä seuraavaksi: ")
+    else:
+        print("Virheellinen kommento.")
+    command = input("Mitä haluaisit tehdä seuraavaksi: ")
 
 print("Kiitos ohjelman käytöstä, näkemiin!")
