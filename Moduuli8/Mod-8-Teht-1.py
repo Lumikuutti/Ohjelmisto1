@@ -4,8 +4,8 @@ connection = mysql.connector.connect(
          host='127.0.0.1',
          port= 3306,
          database='flight_game',
-         user='stu',
-         password='qP72x[!-2}ELoh',
+         user='dbuser',
+         password='password',
          autocommit=True)
 
 def search_airports (icao):
