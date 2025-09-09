@@ -9,12 +9,15 @@ connection = mysql.connector.connect(
          autocommit=True)
 
 def search_airports (country_code):
-    sql = "SELECT type, count(*) as 'amount' FROM airport WHERE iso_country = %s GROUP BY type;"
+    sql = "SELECT type as 'Type', count(*) as 'Amount' FROM airport WHERE iso_country = %s GROUP BY type;"
     #print(sql)
     cursor = connection.cursor(dictionary=True)
     cursor.execute (sql, (country_code,))
     result = cursor.fetchall()
-    return result
+    if cursor.rowcount > 0:
+        for row in result:
+            print(f"{row}")
+    return
 
-input_code = input("Anna maakoodi niin kerron sinulle kuinka monta minkäkin tyyppistä lentokenttää maasta löytyy: ")
-print(search_airports(input_code))
+input_code = input("Give me the country code and I'll tell you how many of each type of airport it has: ")
+search_airports(input_code)
